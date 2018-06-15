@@ -1,0 +1,40 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "runserver",
+            "type": "shell",
+            "command": "${config:python.pythonPath} manage.py runserver",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "makemigrations",
+            "type": "shell",
+            "command": "${config:python.pythonPath} manage.py makemigrations estimular",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "migrate",
+            "type": "shell",
+            "command": "${config:python.pythonPath} manage.py migrate",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "pyclean",
+            "type": "shell",
+            "command": "find . -name \\*.pyc -delete"
+        }
+    ]
+}

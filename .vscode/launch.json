@@ -1,0 +1,25 @@
+{    
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Django",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": false,
+            "pythonPath": "${config:python.pythonPath}",
+            "program": "${workspaceFolder}/manage.py",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "runserver",
+                "--noreload",
+                "--nothreading"
+            ],
+            "env": {},
+            "envFile": "${workspaceFolder}/.env",
+            "debugOptions": [
+                "RedirectOutput",
+                "DjangoDebugging"
+            ]
+        }
+    ]
+}
