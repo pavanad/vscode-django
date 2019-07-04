@@ -35,6 +35,12 @@
             "label": "pyclean",
             "type": "shell",
             "command": "find . -name \\*.pyc -delete"
+        },
+        {
+            "label": "celery",
+            "type": "shell",
+            "command": "${config:python.pythonPath} manage.py celery worker --loglevel=DEBUG --concurrency=4 -n worker@stimbr",
+            "problemMatcher": []            
         }
     ]
 }
