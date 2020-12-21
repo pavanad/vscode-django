@@ -37,6 +37,11 @@
             "command": "find . -name \\*.pyc -delete"
         },
         {
+            "label": "clean_migrations",
+            "type": "shell",
+            "command": "find . -path '*/migrations/*.py' -not -name '__init__.py' -delete"
+        },
+        {
             "label": "celery",
             "type": "shell",
             "command": "${config:python.pythonPath} manage.py celery worker --loglevel=DEBUG --concurrency=4 -n worker@stimbr",
